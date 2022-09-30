@@ -5,7 +5,7 @@ const path = require('path');;
 var access_token = "";
 
 app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, '../../challenge_sant')));
+app.use(express.static(path.join(__dirname, '../../mobiik')));
 // sendFile will go here
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '../index.html'));
