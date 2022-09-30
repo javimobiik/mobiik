@@ -1,0 +1,40 @@
+<!-- views/success.ejs -->
+<!doctype html>
+<html>
+  <head>
+    <title>Github OAuth</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> <!-- load bulma css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- load fontawesome -->
+    <link rel="stylesheet" href="../SCSS/styles.css">
+
+  </head>
+  <body style="background-size: cover;background-position: center;background-repeat: no-repeat;">
+    <div class="container custom-border pt-4 mt-4">
+     <div class="jumbotron" style="background-color: rgba(255, 255, 255, 0.75);">
+          <h1 class="text-primary  text-center"><span class="fa fa-github"></span> Github Information</h1>
+          <p>
+            <strong>Name</strong>: <%= userData.name %><br>
+            <strong>Username</strong>: <%= userData.login %><br>
+              <strong>Company</strong>: <%= userData.company %><br>
+              <strong>Bio</strong>: <%= userData.bio %>
+          </p>
+          <p>
+            <progress value="0" max="5" id="progressBar"></progress>
+          </p>
+          <p>
+            Maybe you know who is... <strong id="username"></strong>
+            <img id="profile-picture" class="img-fluid mw-10 pl-5" />
+          </p>
+          <button onclick="location.href = 'index.html';"
+            type="button" class="btn btn-outline-primary btn-lg mb-3">
+            <h2>Return to Website</h2>
+          </button>
+        </div>
+      </div>
+  </body>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <!-- JS Custom File -->
+  <script type="text/javascript" src="../NodeJS/success.js"></script>
+</html>

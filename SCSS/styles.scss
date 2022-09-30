@@ -1,0 +1,109 @@
+/*
+    ***************************************************************
+    ***************************************************************
+    Variables
+    ***************************************************************
+    ***************************************************************
+*/
+
+$firstColor: cornflowerblue;
+$secondColor: salmon;
+$thirdColor: darkred;
+
+$firstColorTransparent: rgba(100, 149, 237, 0.75);
+$firstColorTransparent2: rgba(100, 149, 237, 0.75);
+
+$background1: "../images/bg/dog-bg.png";
+$background2: "../images/bg/call-to-action.png";
+$background3: "../images/bg/fondo.jpg";
+
+/*
+    ***************************************************************
+    ***************************************************************
+    General Properties
+    ***************************************************************
+    ***************************************************************
+*/
+
+*{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+nav { background-color: transparent; }
+
+header{
+    height: auto;
+    min-height: 50px;
+    background-image: url($background1);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1{ font-size: 3em; }
+
+h2{ font-size: 2em; }
+
+p{ font-size: 1.5em; }
+
+.custom-border{
+    border-top: 10px solid $firstColor;
+    border-bottom: 10px solid $firstColor;
+    border-left: 10px solid $secondColor;
+    border-right: 10px solid $secondColor;
+    border-radius: 25px;
+}
+
+.custom-border-2{
+    border: 1px solid gray;
+    border-radius: 100px;
+}
+
+.scroll {
+    background-color: $firstColorTransparent;
+    transition: all .5s ease-in-out;
+}
+
+#call-to-action{
+    background-image: url($background2);
+    color: white;
+    padding: 5em;
+}
+
+footer{
+    background-image: url($background3);
+    color: white;
+}
+
+.icon-size{
+    font-size: 30px;
+    color: white;
+}
+
+hr.hr-text {
+    position: relative;
+    border: none;
+    height: 5px;
+    background: $secondColor;
+}
+  
+hr.hr-text::before {
+    content: attr(data-content);
+    display: inline-block;
+    background: #fff;
+    font-weight: bold;
+    font-size: 3em;
+    color: $firstColor;
+    border-radius: 30rem;
+    padding: 0.2rem 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse { background-color: rgba(100, 149, 237, 0.75); }
+}
